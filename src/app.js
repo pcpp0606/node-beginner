@@ -1,5 +1,6 @@
 import express from 'express'
-import 'dotenv/config'
+// import 'dotenv/config'
+import { SERVER_PORT } from '../constants/env.constant';
 
 const app = express();
 // const port = 3000
@@ -9,6 +10,6 @@ app.get('/', (req, res) => {
     return res.json('hello1111');
 })
 
-app.listen(port, () => {
-    console.log(`Server is listening on ${port}`);
+app.listen(SERVER_PORT, () => {
+    console.log(`Server is listening on ${SERVER_PORT}`);
 })
